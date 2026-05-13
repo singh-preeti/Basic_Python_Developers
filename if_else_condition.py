@@ -33,3 +33,17 @@ if age >= 18:
         print("You are not Eligible to vote")
 else:
     print("You are Under Age")
+#Banking Example
+#Intial Balance
+acc_holder_name = "Preetti"
+balance = 5000
+atm_pin = 1234
+
+#User Input
+print("Welcome to ABC Bank")
+
+entered_pin = int(input("Enter the pin number: "))
+if entered_pin == atm_pin:
+    print("You can withdraw")
+else:
+    print("You can not withdraw")
