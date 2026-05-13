@@ -47,3 +47,33 @@ if entered_pin == atm_pin:
     print("You can withdraw")
 else:
     print("You can not withdraw")
+
+
+# If elseIf
+#Intial Balance
+acc_holder_name = "Preetti"
+balance = 5000
+atm_pin = 1234
+
+#User Input
+print("Welcome to ABC Bank")
+
+entered_pin = int(input("Enter the pin number: "))
+
+#Pin Verification
+if entered_pin == atm_pin:
+    print("Pin Verified Successfully")
+    print("Available balance is:", balance)
+
+withdraw_amount = int(input("Enter the withdraw amount: "))
+if withdraw_amount <= balance:
+    if withdraw_amount % 100 == 0:
+        balance = balance - withdraw_amount
+        print("Please collect your cash")
+        print("Withdrwal Successful")
+        print("Your Available balance is:", balance)
+    else:
+        print("Amount should be multiple of 100")
+else:
+    print("You don't have enough cash")
+
