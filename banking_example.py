@@ -38,3 +38,29 @@ while True:
 
         case _:
             print("Invalid choice")
+#Exception for online banking example in python
+correct_pin = 1234
+balance = 1000
+
+try:
+  pin = int(input("Enter PIN: "))
+
+  if pin != correct_pin:
+        raise Exception("PIN does not match")
+  amount = int(input("Enter amount to transfer: "))
+
+  if amount <= 0:
+      raise ValueError("Amount must be positive")
+
+  if amount > balance:
+      raise ValueError("Insufficient balance")
+  balance = balance - amount
+  print("transfer successful")
+  print("remaining balance:", balance)
+
+except ValueError as ve:
+    print("Value Error:", ve)
+except Exception as e:
+    print("Error:", e)
+finally:
+    print("Transaction Finished")
